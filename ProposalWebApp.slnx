@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ProposalWebApp/ProposalWebApp.Client/ProposalWebApp.Client.csproj" />
+  <Project Path="ProposalWebApp/ProposalWebApp/ProposalWebApp.csproj" />
+</Solution>

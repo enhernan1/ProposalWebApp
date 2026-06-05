@@ -1,0 +1,17 @@
+﻿@using ProposalWebApp.Client.Layout
+
+<Router AppAssembly="@typeof(Program).Assembly"
+        AdditionalAssemblies="@(new[]
+                                {
+                            typeof(ProposalWebApp.Client._Imports).Assembly
+                        })">
+
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData"
+                   DefaultLayout="@typeof(MainLayout)" />
+
+        <FocusOnNavigate RouteData="@routeData"
+                         Selector="h1" />
+    </Found>
+
+</Router>

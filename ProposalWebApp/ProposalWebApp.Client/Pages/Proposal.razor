@@ -1,0 +1,55 @@
+﻿@page "/"
+@using ProposalWebApp.Client.Components
+@rendermode InteractiveWebAssembly
+@inject IJSRuntime JS
+
+<HeroSection />
+<div class="content-wrapper">
+
+    <StorySection
+        Image="/images/Picture_in_Bloomington.JPG"
+        Title="The Beginning"
+        Text="I still remember when we first started getting to know each other. I could barely make eye contact because I was so nervous around you. Looking back now, it's funny that the person who made me feel that way is the same person I feel most comfortable with." />
+
+    <StorySection 
+        Image="/images/First_Trip.jpeg"
+        Title="The Adventures"
+        Text="We've shared so many experiences together, and I really appreciate how you always push us to try new things. You’ve created so many memories I wouldn’t have had without you, cabezona." />
+
+    <TimelineSection />
+
+    <LittleThingsSection Image="/images/Farm_Picture.jpeg" />
+
+    <LoveListSection Items="loveList" />
+
+    <FutureSection />
+
+    <PauseSection />
+
+    <ProposalSection />
+
+</div>
+
+@code {
+
+    List<string> loveList = new List<string>
+    {
+        "How independent and strong you are",
+        "The way your brown eyes light up when the sun hits them",
+        "How naturally comfortable you've become around me (perhaps a little too comfortable sometimes lol)",
+        "Your camarones a la diabla (and everything else you cook)",
+        "The way everything you wear somehow suits you perfectly",
+        "Your \"Travel, Travel, Trave!\" mindset",
+        "Your thoughtfulness and care toward others and me"
+    };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync(
+                "initializeScrollAnimations");
+        }
+    }
+
+}

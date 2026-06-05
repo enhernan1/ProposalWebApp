@@ -1,0 +1,32 @@
+﻿<div class="fade-section story-section">
+
+    <div class="parallax">
+        <img src="@Image"
+             class="story-image" />
+    </div>
+
+    <div class="story-text">
+
+        <h2>The Little Things</h2>
+
+        <p>
+            After everything we’ve experienced together, the things I think about most
+            aren’t always the big moments. They’re the small, everyday ones that somehow
+            ended up meaning the most.
+        </p>
+
+        <ul class="little-things-list">
+            <li>Being cabezones</li>
+            <li>Matching our big back activities</li>
+            <li>How playful we are with each other</li>
+            <li>Knowing you're always my Player 2</li>
+            <li>Our inside jokes — "Que es eso?!?"</li>
+        </ul>
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public string Image { get; set; } = "";
+}

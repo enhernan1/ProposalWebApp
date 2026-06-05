@@ -1,0 +1,28 @@
+﻿<div class="fade-section story-section">
+    <div class="parallax">
+        <img src="@Image"
+             class="story-image" />
+    </div>
+
+    <div class="story-text">
+
+        <h2>@Title</h2>
+
+        <p>@Text</p>
+
+    </div>
+
+</div>
+
+@code {
+
+    [Parameter]
+    public string Image { get; set; } = "";
+
+    [Parameter]
+    public string Title { get; set; } = "";
+
+    [Parameter]
+    public string Text { get; set; } = "";
+
+}

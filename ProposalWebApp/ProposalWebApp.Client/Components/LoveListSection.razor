@@ -1,0 +1,25 @@
+﻿<div class="fade-section story-section love-list-section">
+
+    <div class="story-text">
+
+        <h2>What I Love About You</h2>
+
+        <p class="love-intro">
+            There are a lot of things I could say, but these are the ones that always stand out.
+        </p>
+
+        <ul class="love-list">
+            @foreach (var item in Items)
+            {
+                <li class="love-item">@item</li>
+            }
+        </ul>
+
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public List<string> Items { get; set; } = new();
+}

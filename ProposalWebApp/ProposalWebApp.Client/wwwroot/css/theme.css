@@ -1,0 +1,12 @@
+﻿:root {
+    /* Background + text */
+    --bg-primary: #faf8f5;
+    --text-primary: #2d2d2d;
+    /* Accent colors */
+    --accent-gold: #c8a96a;
+    --accent-blue: #7fa7c9;
+    --accent-green: #6b8f71;
+    /* UI styling */
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}

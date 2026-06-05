@@ -1,0 +1,69 @@
+﻿@using MudBlazor
+@inject IJSRuntime JS
+
+<div class="proposal-section fade-section story-section">
+
+    @if (!accepted)
+    {
+        <h1>Will You Marry Me?</h1>
+
+        <MudButton Class="proposal-button"
+                   Variant="Variant.Filled"
+                   OnClick="AcceptProposal">
+
+            Yes ❤️
+        </MudButton>
+    }
+    else
+    {
+        <div class="accepted-message">
+
+            <h1>She Said Yes!</h1>
+
+            <div class="photo-gallery">
+
+                @foreach (var photo in Photos)
+                {
+                    <div class="gallery-item">
+                        <img src="@photo"
+                             class="gallery-photo" />
+                    </div>
+                }
+
+            </div>
+
+            <p>
+                June 6, 2026
+            </p>
+
+            <p>
+                I can't wait for all the adventures still ahead of us hermosa.
+            </p>
+
+        </div>
+    }
+
+</div>
+
+@code {
+
+    private bool accepted;
+
+    private List<string> Photos =
+    [
+        "/images/Valentine_PhotoShoot.JPG",
+        "/images/Colorado.jpeg",
+        "/images/Dinsey_Cruise_Breakfast.jpeg",
+        "/images/Farm_Picture.jpeg",
+        "/images/First_Trip.jpeg",
+        "/images/Zoo_Picture.JPEG"
+    ];
+
+    private async Task AcceptProposal()
+    {
+        accepted = true;
+        
+        await JS.InvokeVoidAsync("launchConfetti");
+    }
+
+}
