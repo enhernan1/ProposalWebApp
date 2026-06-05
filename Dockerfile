@@ -5,9 +5,9 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore ProposalWebApp/ProposalWebApp.csproj
+RUN dotnet restore ProposalWebApp/ProposalWebApp/ProposalWebApp.csproj
 
-RUN dotnet publish ProposalWebApp/ProposalWebApp.csproj \
+RUN dotnet publish ProposalWebApp/ProposalWebApp/ProposalWebApp.csproj \
     -c Release \
     -o /app/publish
 
