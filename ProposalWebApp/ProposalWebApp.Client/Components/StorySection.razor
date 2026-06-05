@@ -1,7 +1,8 @@
 ﻿<div class="fade-section story-section">
     <div class="parallax">
         <img src="@Image"
-             class="story-image" />
+             class="story-image"
+             style="top: @ImageTop;" />
     </div>
 
     <div class="story-text">
@@ -24,5 +25,8 @@
 
     [Parameter]
     public string Text { get; set; } = "";
+
+    [Parameter]
+    public string ImageTop { get; set; } = "10%";
 
 }
