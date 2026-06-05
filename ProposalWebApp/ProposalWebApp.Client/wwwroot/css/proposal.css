@@ -328,8 +328,3 @@ html {
     border-radius: 20px;
     display: block;
 }
-
-/* Ensure body doesn't get horizontal scrollbar from within-gallery oversize elements */
-html, body {
-    overflow-x: hidden;
-}
