@@ -260,13 +260,13 @@ html {
 }
 
 .proposal-button {
-    min-width: 180px;
+    min-width: 225px;
     height: 56px;
     border-radius: 999px !important;
     font-size: 1.1rem !important;
     font-weight: 600 !important;
     letter-spacing: .5px;
-    background: var(--accent-gold) !important;
+    background: var(--accent-blue) !important;
     color: white !important;
     box-shadow: 0 8px 24px rgba(0,0,0,.15);
     transition: transform .3s ease, box-shadow .3s ease !important;

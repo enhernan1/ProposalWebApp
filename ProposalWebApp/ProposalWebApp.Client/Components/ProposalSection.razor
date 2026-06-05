@@ -5,13 +5,17 @@
 
     @if (!accepted)
     {
-        <h1>Will You Marry Me?</h1>
+
+        <h1>She Said Yes!</h1>
+        <p>
+            June 6, 2026
+        </p>
 
         <MudButton Class="proposal-button"
                    Variant="Variant.Filled"
                    OnClick="AcceptProposal">
 
-            Yes ❤️
+            View Our Memories
         </MudButton>
     }
     else
@@ -19,6 +23,9 @@
         <div class="accepted-message">
 
             <h1>She Said Yes!</h1>
+            <p>
+                June 6, 2026
+            </p>
 
             <div class="photo-gallery">
 
@@ -31,10 +38,6 @@
                 }
 
             </div>
-
-            <p>
-                June 6, 2026
-            </p>
 
             <p>
                 I can't wait for all the adventures still ahead of us hermosa.
@@ -56,14 +59,14 @@
         "/images/Dinsey_Cruise_Breakfast.jpeg",
         "/images/Farm_Picture.jpeg",
         "/images/First_Trip.jpeg",
-        "/images/Zoo_Picture.JPEG"
+        "/images/Zoo_Picture.JPEG",
+        "/images/Mickey_Mouse_Picture.JPG"
     ];
 
     private async Task AcceptProposal()
     {
         accepted = true;
-        
-        await JS.InvokeVoidAsync("launchConfetti");
+      
     }
 
 }
